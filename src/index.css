@@ -1,0 +1,136 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #14151a;
+  color: #f0f0f2;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #1c1e26;
+  border-bottom: 1px solid #2c2f3a;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+nav a {
+  color: #b8bcc8;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+  color: #f0f0f2;
+}
+
+nav a.active {
+  color: #ff5c5c;
+  border-bottom: 2px solid #ff5c5c;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.movie-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.movie-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: #1c1e26;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #2c2f3a;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-4px);
+  border-color: #ff5c5c;
+}
+
+.movie-card img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-card .movie-card-info {
+  padding: 0.75rem 0.9rem;
+}
+
+.movie-card h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+}
+
+.movie-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #9a9ea9;
+}
+
+.detail {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.detail img {
+  width: 240px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.detail .meta {
+  color: #9a9ea9;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: #ff5c5c;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.not-found {
+  text-align: center;
+  padding: 3rem 1rem;
+}
