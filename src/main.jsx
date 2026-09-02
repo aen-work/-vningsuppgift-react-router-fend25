@@ -20,7 +20,10 @@ createRoot(document.getElementById("root")).render(
           ============================================================
           TODO 1: Bygg upp routträdet med <Route>-element.
 
-              Lägg här in flera <Route>-komponenter - movies/:movieid, about och  * (404-sida) 
+              Lägg här in flera <Route>-komponenter - 
+                1. movies/:movieid 
+                2. about och  
+                3. * (404-sida) 
             </Route>
 
           Dokumentation: https://reactrouter.com/6.3.0/getting-started/overview

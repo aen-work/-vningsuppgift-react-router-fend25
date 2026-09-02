@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { movies } from "../data/movies.js";
 
 export default function MovieDetail() {
+
   // TODO 5: Hämta ut movieId från URL:en med hooken useParams().
   // Namnet du får ut motsvarar det du skrev i routen i main.jsx
   // (":movieId").
@@ -12,8 +13,8 @@ export default function MovieDetail() {
   // OBS: useParams() ger dig alltid en STRÄNG, men movie.id i
   // datafilen är ett NUMBER. Du måste alltså konvertera en av dem
   // för att jämförelsen ska bli sann, t.ex. med Number(movieId).
-  //
-  // const movie = movies.find((m) => m.id === Number(movieId));
+  
+  // Använd array-metoden .find och movieId
 
   // TODO 7: Om ingen film hittas (movie är undefined), rendera ett
   // enkelt felmeddelande istället för att appen kraschar, t.ex:
