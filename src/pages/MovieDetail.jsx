@@ -4,14 +4,13 @@ import { movies } from "../data/movies.js";
 export default function MovieDetail() {
   const { movieId } = useParams();
 
-  const movie = movies.find((movie) => movie.id === Number(movieId));
-
   // TODO 6: Hitta rätt film i "movies"-arrayen som matchar movieId.
   // OBS: useParams() ger dig alltid en STRÄNG, men movie.id i
   // datafilen är ett NUMBER. Du måste alltså konvertera en av dem
   // för att jämförelsen ska bli sann, t.ex. med Number(movieId).
-
   // Använd array-metoden .find och movieId
+
+  const movie = movies.find((movie) => movie.id === Number(movieId));
 
   // TODO 7: Om ingen film hittas (movie är undefined), rendera ett
   // enkelt felmeddelande istället för att appen kraschar, t.ex:

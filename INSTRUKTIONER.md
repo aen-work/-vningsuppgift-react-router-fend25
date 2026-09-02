@@ -15,7 +15,6 @@ Du behöver göra följande:
 - Läsa ut URL-parametrar med `useParams`
 - Sätta upp en catch-all/404-route
 
-
 Alla ställen du behöver fylla i är märkta med `TODO 1`, `TODO 2` osv. i
 koden. Du hittar dem i:
 
@@ -74,15 +73,15 @@ Hantera även fallet att någon skriver in ett id som inte finns
 
 Gå igenom den här listan:
 
-- [ ] Startsidan visar en meny med "Hem" och "Om oss"
-- [ ] Den aktiva sidan i menyn är visuellt markerad
-- [ ] Startsidan visar alla 6 filmer som klickbara kort
-- [ ] Klick på ett filmkort tar dig till en egen sida för den filmen
+- [x] Startsidan visar en meny med "Hem" och "Om oss"
+- [x] Den aktiva sidan i menyn är visuellt markerad
+- [x] Startsidan visar alla 6 filmer som klickbara kort
+- [x] Klick på ett filmkort tar dig till en egen sida för den filmen
       (`/movies/1`, `/movies/2` osv.) med titel, bild och beskrivning
-- [ ] "Om oss"-länken fungerar
-- [ ] En påhittad URL, t.ex. `/blaha`, visar 404-sidan istället för att
+- [x] "Om oss"-länken fungerar
+- [x] En påhittad URL, t.ex. `/blaha`, visar 404-sidan istället för att
       krascha eller visa en vit sida
-- [ ] Om du går till `/movies/999` (ett id som inte finns) visas ett
+- [x] Om du går till `/movies/999` (ett id som inte finns) visas ett
       snällt felmeddelande istället för en krasch
 
 ## Bonusuppgifter (om du blir klar i tid)
@@ -113,7 +112,7 @@ Välj en eller flera:
 - **Menyn syns men ingen sida visas under den:** du har troligen
   glömt `<Outlet />` i `Layout.jsx` (Steg 3).
 - **En nästlad route visas inte alls:** kontrollera att den ligger
-  *inuti* `<Route path="/" element={<Layout />}>...</Route>` och inte
+  _inuti_ `<Route path="/" element={<Layout />}>...</Route>` och inte
   som en egen, fristående `<Route>` direkt under `<Routes>`.
 - **Klick på en film ger en tom eller trasig detaljsida:** kolla att
   du jämför `movie.id` med `Number(movieId)` och inte bara `movieId`
