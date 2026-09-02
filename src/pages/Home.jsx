@@ -6,7 +6,25 @@ export default function Home() {
     <div>
       <h2>Alla filmer</h2>
       <ul className="movie-list">
-        {/*
+        {movies.map((movie) => (
+          <li key={movie.id}>
+            <Link to={`/movies/${movie.id}`} className="movie-card">
+              <img src={movie.image} alt={movie.title} />
+              <div className="movie-card-info">
+                <h3>{movie.title}</h3>
+                <p>
+                  {movie.year} · {movie.genre}
+                </p>
+              </div>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+/*
           TODO 4: Loopa igenom "movies" med .map() och rendera en
           <li> med en <Link> per film.
 
@@ -27,8 +45,4 @@ export default function Home() {
                 </div>
               </Link>
             </li>
-        */}
-      </ul>
-    </div>
-  );
-}
+        */

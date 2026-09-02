@@ -6,6 +6,20 @@ export default function Layout() {
       <header>
         <h1>🎬 Filmklubben</h1>
         <nav>
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "active" : "")}
+            end
+          >
+            Hem
+          </NavLink>
+
+          <NavLink
+            to="/about"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Om oss
+          </NavLink>
           {/*
             TODO 2: Lägg till två <NavLink>-element här, ett till "/"
             och ett till "/about".
@@ -30,11 +44,15 @@ export default function Layout() {
       </header>
 
       <main>
-        {/*
+        {
+          <Outlet />
+
+          /*
           TODO 3: Rendera <Outlet /> här. Det är platsen där React
           Router ritar ut den route som just nu matchar URL:en
           (Home, MovieDetail, About eller NotFound).
-        */}
+        */
+        }
       </main>
     </div>
   );
