@@ -13,10 +13,12 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>   (gemensam ram med nav)
-              <Route index element={<Home />} />
-              {/* Lägg in fler routes här */}
-              {/*
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="movies/:movieid" element={<MovieDetail />} />
+          <Route path="*" element={<NotFound />} />
+          {/* 
           ============================================================
           TODO 1: Bygg upp routträdet med <Route>-element.
 
@@ -30,8 +32,7 @@ createRoot(document.getElementById("root")).render(
           ============================================================
         */}
         </Route>
-        
       </Routes>
     </BrowserRouter>
-  </StrictMode>
+  </StrictMode>,
 );
